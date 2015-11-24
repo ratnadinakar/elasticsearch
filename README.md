@@ -1,7 +1,29 @@
 # Elastic Search Snippets
 
-Count
+###Getting total records
 
-GET : ELASTIC_SEARCHURL/<index_name>/_count
+```
+Request Type : GET
+URL : http://elasticsearch/index/_count
 
+```
+
+###Including Regular Expression
+
+Basic Structure
+
+```
+Request Type : POST
+URL : http://elasticsearch/index/_search
+
+Body
+{
+   "query":{
+      "regexp":{
+       "property":"regularExpression"
+      }
+   }
+}
+
+```
 
